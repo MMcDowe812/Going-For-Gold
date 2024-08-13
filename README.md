@@ -5,6 +5,7 @@ Project 4 Olympics Analysis
 1. Do regions of the world determine how well athletes will do per sport?
 2. Does Population increase sport success rate?
 3. Does number of athletes correlate to medal wins overall/per sport?
+4. Are certain countries more likely to win more medals? Specificlly gold medals?
 
 ## Tools Being Used
 Python/Pandas
