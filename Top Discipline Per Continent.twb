@@ -1,0 +1,1156 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='country_data_clean+' inline='true' name='federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='country_data_clean' name='textscan.0jr8s6y09ctfn810v21m419315bn'>
+            <connection class='textscan' directory='C:/Users/dsfac/KUProjects/Gold Practice/Model Data' filename='country_data_clean.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0jr8s6y09ctfn810v21m419315bn' name='country_data_clean.csv' table='[country_data_clean#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Country Code' ordinal='1' />
+            <column datatype='string' name='Country' ordinal='2' />
+            <column datatype='string' name='Contry Full' ordinal='3' />
+            <column datatype='integer' name='Population 2024' ordinal='4' />
+            <column datatype='integer' name='Population 2023' ordinal='5' />
+            <column datatype='string' name='Continent' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0jr8s6y09ctfn810v21m419315bn' name='medallists.csv' table='[medallists#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='medal_date' ordinal='0' />
+              <column datatype='string' name='medal_type' ordinal='1' />
+              <column datatype='integer' name='medal_code' ordinal='2' />
+              <column datatype='string' name='name' ordinal='3' />
+              <column datatype='string' name='gender' ordinal='4' />
+              <column datatype='string' name='country' ordinal='5' />
+              <column datatype='string' name='country_code' ordinal='6' />
+              <column datatype='string' name='nationality' ordinal='7' />
+              <column datatype='string' name='team' ordinal='8' />
+              <column datatype='string' name='team_gender' ordinal='9' />
+              <column datatype='string' name='discipline' ordinal='10' />
+              <column datatype='string' name='event' ordinal='11' />
+              <column datatype='string' name='event_type' ordinal='12' />
+              <column datatype='string' name='url_event' ordinal='13' />
+              <column datatype='date' name='birth_date' ordinal='14' />
+              <column datatype='integer' name='code' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0jr8s6y09ctfn810v21m419315bn' name='country_data_clean.csv' table='[country_data_clean#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Country Code' ordinal='1' />
+              <column datatype='string' name='Country' ordinal='2' />
+              <column datatype='string' name='Contry Full' ordinal='3' />
+              <column datatype='integer' name='Population 2024' ordinal='4' />
+              <column datatype='integer' name='Population 2023' ordinal='5' />
+              <column datatype='string' name='Continent' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medal_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[medal_date]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>medal_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medal_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[medal_type]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>medal_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medal_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[medal_code]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>medal_code</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_code]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>country_code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team_gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team_gender]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>team_gender</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>discipline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[discipline]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>discipline</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>event</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event_type]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>event_type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>url_event</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[url_event]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>url_event</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[birth_date]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>birth_date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[code]</local-name>
+            <parent-name>[medallists.csv]</parent-name>
+            <remote-alias>code</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country Code]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Country Code</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Contry Full</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Contry Full]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Contry Full</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population 2024</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population 2024]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Population 2024</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population 2023</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population 2023]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Population 2023</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Continent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Continent]</local-name>
+            <parent-name>[country_data_clean.csv]</parent-name>
+            <remote-alias>Continent</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Continent]' role='dimension' type='nominal' />
+      <column caption='Country Code1' datatype='string' name='[Country Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country1' datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='country_data_clean.csv' datatype='table' name='[__tableau_internal_object_id__].[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='medallists.csv' datatype='table' name='[__tableau_internal_object_id__].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' role='measure' type='quantitative' />
+      <column caption='Birth Date' datatype='date' name='[birth_date]' role='dimension' type='ordinal' />
+      <column caption='Code' datatype='integer' name='[code]' role='dimension' type='ordinal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Code' datatype='string' name='[country_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Discipline' datatype='string' name='[discipline]' role='dimension' type='nominal' />
+      <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+      <column caption='Event Type' datatype='string' name='[event_type]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Medal Code' datatype='integer' name='[medal_code]' role='dimension' type='ordinal' />
+      <column caption='Medal Date' datatype='date' name='[medal_date]' role='dimension' type='ordinal' />
+      <column caption='Medal Type' datatype='string' name='[medal_type]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Nationality' datatype='string' name='[nationality]' role='dimension' type='nominal' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <column caption='Team Gender' datatype='string' name='[team_gender]' role='dimension' type='nominal' />
+      <column caption='Url Event' datatype='string' name='[url_event]' role='dimension' type='nominal' />
+      <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+      <column-instance column='[event]' derivation='None' name='[none:event:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Exclusions (Continent,Event)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Continent:nk]' />
+          <groupfilter function='level-members' level='[none:event:nk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/dsfac/AppData/Local/Temp/TableauTemp/#TableauTemp_0lf0rn60udjirm1f1zgs50qh2mjb.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/22/2024 10:15:08 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724' table='[Extract].[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='medallists.csv_999366E5EAA140C49A29CDDBDC466179' table='[Extract].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' type='table' />
+            <relation name='country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724' table='[Extract].[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>medal_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[medal_date]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>medal_date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>medallists.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>medal_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[medal_type]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>medal_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>medal_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[medal_code]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>medal_code</remote-alias>
+              <ordinal>2</ordinal>
+              <family>medallists.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1530</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>4</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>5</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_code]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>country_code</remote-alias>
+              <ordinal>6</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>7</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>8</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team_gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team_gender]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>team_gender</remote-alias>
+              <ordinal>9</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>discipline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[discipline]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>discipline</remote-alias>
+              <ordinal>10</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>event</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[event]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>event</remote-alias>
+              <ordinal>11</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>289</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>event_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[event_type]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>event_type</remote-alias>
+              <ordinal>12</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>url_event</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[url_event]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>url_event</remote-alias>
+              <ordinal>13</ordinal>
+              <family>medallists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>458</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[birth_date]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>birth_date</remote-alias>
+              <ordinal>14</ordinal>
+              <family>medallists.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1336</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[code]</local-name>
+              <parent-name>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</parent-name>
+              <remote-alias>code</remote-alias>
+              <ordinal>15</ordinal>
+              <family>medallists.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1533</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[medallists.csv_999366E5EAA140C49A29CDDBDC466179]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>16</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>206</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country Code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country Code]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Country Code</remote-alias>
+              <ordinal>17</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>206</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>18</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>206</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Contry Full</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Contry Full]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Contry Full</remote-alias>
+              <ordinal>19</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>206</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Population 2024</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Population 2024]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Population 2024</remote-alias>
+              <ordinal>20</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>180</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Population 2023</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Population 2023]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Population 2023</remote-alias>
+              <ordinal>21</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>180</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Continent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Continent]</local-name>
+              <parent-name>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</parent-name>
+              <remote-alias>Continent</remote-alias>
+              <ordinal>22</ordinal>
+              <family>country_data_clean.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='country_data_clean.csv' id='country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724'>
+            <properties context=''>
+              <relation connection='textscan.0jr8s6y09ctfn810v21m419315bn' name='country_data_clean.csv' table='[country_data_clean#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='Country Code' ordinal='1' />
+                  <column datatype='string' name='Country' ordinal='2' />
+                  <column datatype='string' name='Contry Full' ordinal='3' />
+                  <column datatype='integer' name='Population 2024' ordinal='4' />
+                  <column datatype='integer' name='Population 2023' ordinal='5' />
+                  <column datatype='string' name='Continent' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724' table='[Extract].[country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724]' type='table' />
+            </properties>
+          </object>
+          <object caption='medallists.csv' id='medallists.csv_999366E5EAA140C49A29CDDBDC466179'>
+            <properties context=''>
+              <relation connection='textscan.0jr8s6y09ctfn810v21m419315bn' name='medallists.csv' table='[medallists#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='medal_date' ordinal='0' />
+                  <column datatype='string' name='medal_type' ordinal='1' />
+                  <column datatype='integer' name='medal_code' ordinal='2' />
+                  <column datatype='string' name='name' ordinal='3' />
+                  <column datatype='string' name='gender' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='country_code' ordinal='6' />
+                  <column datatype='string' name='nationality' ordinal='7' />
+                  <column datatype='string' name='team' ordinal='8' />
+                  <column datatype='string' name='team_gender' ordinal='9' />
+                  <column datatype='string' name='discipline' ordinal='10' />
+                  <column datatype='string' name='event' ordinal='11' />
+                  <column datatype='string' name='event_type' ordinal='12' />
+                  <column datatype='string' name='url_event' ordinal='13' />
+                  <column datatype='date' name='birth_date' ordinal='14' />
+                  <column datatype='integer' name='code' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='medallists.csv_999366E5EAA140C49A29CDDBDC466179' table='[Extract].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[country_code]' />
+              <expression op='[Country Code]' />
+            </expression>
+            <first-end-point object-id='medallists.csv_999366E5EAA140C49A29CDDBDC466179' />
+            <second-end-point object-id='country_data_clean.csv_D7059AC86FE84BE997B66DE00B1AD724' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Discipline per Continent</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='country_data_clean+' name='federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6'>
+            <column datatype='string' name='[Continent]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='medallists.csv' datatype='integer' name='[__tableau_internal_object_id__].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:medallists.csv_999366E5EAA140C49A29CDDBDC466179:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='medallists.csv' datatype='table' name='[__tableau_internal_object_id__].[medallists.csv_999366E5EAA140C49A29CDDBDC466179]' role='measure' type='quantitative' />
+            <column caption='Discipline' datatype='string' name='[discipline]' role='dimension' type='nominal' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[discipline]' derivation='None' name='[none:discipline:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:Continent:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Continent:nk]' />
+              <groupfilter function='member' level='[none:Continent:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:discipline:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[medallists.csv_999366E5EAA140C49A29CDDBDC466179])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:discipline:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:discipline:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[__tableau_internal_object_id__].[cnt:medallists.csv_999366E5EAA140C49A29CDDBDC466179:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:Continent:nk]</column>
+            <column>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:discipline:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:Continent:nk] / [federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:discipline:nk])</rows>
+        <cols>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[__tableau_internal_object_id__].[cnt:medallists.csv_999366E5EAA140C49A29CDDBDC466179:qk]</cols>
+      </table>
+      <simple-id uuid='{731EDA10-583B-4812-8004-97CD3274A1E5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:Continent:nk]</field>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:discipline:nk]</field>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:event:nk]</field>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:event_type:nk]</field>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:medal_code:ok]</field>
+            <field>[federated.0wlpf8j0hdy1ir1ckjx5g0s8oxx6].[none:team:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E938926-B1FF-4C38-A11C-384A370189E9}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
