@@ -39,6 +39,6 @@ Historic Olympic Data: https://www.kaggle.com/datasets/muhammadehsan000/olympic-
 
 2024 Olympic Data: https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games
 
-Olympic Host Cities(Not sure if used): https://www.kaggle.com/datasets/jonscheaffer/olympic-host-cities
+Olympic Host Cities: https://www.kaggle.com/datasets/jonscheaffer/olympic-host-cities
 
 
