@@ -5,6 +5,9 @@ Project 4: Historic and 2024 Olympic Analysis
 
 https://kuvirtdatapt0-lze7715.slack.com/files/U06N8B4BDUP/F07GWJ4HNCU/project_4_proposal-_going_for_gold.docx
 
+# Powerpoint Presentation
+
+https://1drv.ms/p/c/85bf7dba461d47a1/ERvZ_y2ZCqlMoLDtikjx6zYB7eC18v7XPWSKY58fOZ678w
 
 ## Questions to be Answered with Analysis
 1. Do regions of the world determine how well athletes will do per sport?
